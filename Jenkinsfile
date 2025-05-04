@@ -41,9 +41,9 @@ pipeline {
 
         stage('Remote Deploy to Server 1') {
             steps {
-                echo 'Deploying to Server 1 (13.235.75.89)...'
+                echo 'Deploying to Server 1 (172.31.4.110)...'
                 sh '''
-                ssh -o StrictHostKeyChecking=no ubuntu@13.235.75.89 << 'ENDSSH'
+                ssh -o StrictHostKeyChecking=no ubuntu@172.31.4.110 << 'ENDSSH'
                     # Navigate to the project directory or clone if it doesn't exist
                     cd ~/cricket-website || git clone https://github.com/sssagane/Cricket-project.git cricket-website && cd cricket-website
 
